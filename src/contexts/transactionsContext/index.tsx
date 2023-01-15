@@ -14,6 +14,12 @@ export interface ITransactionsContext {
     setListTransaction: React.Dispatch<React.SetStateAction<ITransaction[]>>
     addTransaction: () => void
     totalTransaction: number
+    setTotalTransaction: React.Dispatch<React.SetStateAction<number>>
+    filteredList: ITransaction[]
+    filterList: (typeFilter: string) => void
+    filterOn: boolean
+    setFilterOn: React.Dispatch<React.SetStateAction<boolean>>
+    filterType: string
 }
 
 export interface ITransaction {
@@ -33,6 +39,9 @@ export const TransactionsProvider = ({children}:ITransactionsContextProps) => {
     const [transactionType, setTransactionType] = useState<string>("Entrada")
     const [listTransaction, setListTransaction] = useState<ITransaction[]>([])
     const [totalTransaction, setTotalTransaction] = useState<number>(0)
+    const [filteredList, setFilteredList] = useState<ITransaction[]>([])
+    const [filterOn, setFilterOn] = useState<boolean>(false)
+    const [filterType, setFilterType] = useState<string>("")
 
     const addTransaction = () => {
 
@@ -44,6 +53,13 @@ export const TransactionsProvider = ({children}:ITransactionsContextProps) => {
         }
 
         return setListTransaction([...listTransaction, newTransaction])
+    }
+
+    const filterList = (typeFilter: string) => {
+        setFilterType(typeFilter)
+        const resultFilter = listTransaction.filter(el => el.type === typeFilter)
+
+        return (setFilteredList(resultFilter), setFilterType(typeFilter))
     }
 
     useEffect(() => {
@@ -73,7 +89,13 @@ export const TransactionsProvider = ({children}:ITransactionsContextProps) => {
         listTransaction,
         setListTransaction,
         addTransaction,
-        totalTransaction
+        totalTransaction,
+        setTotalTransaction,
+        filteredList,
+        filterList,
+        filterOn,
+        setFilterOn,
+        filterType
     }}>{children}</TransactionsContext.Provider>)
 }
 

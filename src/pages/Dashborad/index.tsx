@@ -1,5 +1,6 @@
 import Header from "../../components/Header"
 import Form from "../../components/Form"
+import List from "../../components/List"
 
 const Dashboard = () => {
     return (
@@ -7,6 +8,7 @@ const Dashboard = () => {
             <h1>Dashboard</h1>
             <Header/>
             <Form/>
+            <List/>
         </>
     )
 }
