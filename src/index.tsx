@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
+import { TransactionsProvider } from './contexts/transactionsContext';
 import './index.css';
 import App from './App';
 
@@ -9,8 +10,10 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <TransactionsProvider>
+      <BrowserRouter>
+          <App />
+      </BrowserRouter>
+    </TransactionsProvider>
   </React.StrictMode>
 );
