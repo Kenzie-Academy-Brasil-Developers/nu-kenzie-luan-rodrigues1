@@ -1,9 +1,6 @@
-import { useContext } from "react"
-import { TransactionsContext } from "../../contexts/transactionsContext"
 import logo from "../../assets/Nu Kenzie.png"
 
 const Header = () => {
-    const {} = useContext(TransactionsContext)
     return (
         <header>
             <nav>
