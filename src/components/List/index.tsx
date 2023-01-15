@@ -1,10 +1,16 @@
 import { useContext } from "react"
 import { ITransaction, TransactionsContext } from "../../contexts/transactionsContext"
 import Card from "../Card"
+import noCard from "../../assets/NoCard.png"
 
 const List = () => {
 
-    const {listTransaction, filteredList, filterList, filterOn, setFilterOn} = useContext(TransactionsContext)
+    const {listTransaction, 
+        filteredList, 
+        filterList, 
+        filterOn, 
+        setFilterOn} 
+        = useContext(TransactionsContext)
 
     return (
         <section>
@@ -18,7 +24,11 @@ const List = () => {
             </div>
             <ul>
                 {(!filterOn && listTransaction[0] === undefined) || (filterOn && filteredList[0] === undefined) ?
-                <li><h1>sem transações</h1></li>
+                <>
+                    <li><img src={noCard} alt="card sem valor"/></li>
+                    <li><img src={noCard} alt="card sem valor"/></li>
+                    <li><img src={noCard} alt="card sem valor"/></li>
+                </>
                 : 
                 !filterOn ? 
                 listTransaction.map((el: ITransaction) => <Card infoCard={el} key={el.id}/>)

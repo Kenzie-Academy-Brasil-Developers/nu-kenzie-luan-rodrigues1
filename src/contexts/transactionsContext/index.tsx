@@ -20,6 +20,7 @@ export interface ITransactionsContext {
     filterOn: boolean
     setFilterOn: React.Dispatch<React.SetStateAction<boolean>>
     filterType: string
+    deleteTransaction: (id: number) => void
 }
 
 export interface ITransaction {
@@ -44,7 +45,6 @@ export const TransactionsProvider = ({children}:ITransactionsContextProps) => {
     const [filterType, setFilterType] = useState<string>("")
 
     const addTransaction = () => {
-
         const newTransaction = {
             description: transactionDescription,
             value: transactionValue,
@@ -56,10 +56,19 @@ export const TransactionsProvider = ({children}:ITransactionsContextProps) => {
     }
 
     const filterList = (typeFilter: string) => {
-        setFilterType(typeFilter)
         const resultFilter = listTransaction.filter(el => el.type === typeFilter)
 
         return (setFilteredList(resultFilter), setFilterType(typeFilter))
+    }
+
+    const deleteTransaction = (id: number) => {
+        if(filterOn){
+            const deleteFilterListItem = filteredList.filter(el => el.id !== id)
+            setFilteredList(deleteFilterListItem)
+        }
+
+        const deleteListItem = listTransaction.filter(el => el.id !== id) 
+        return setListTransaction(deleteListItem)
     }
 
     useEffect(() => {
@@ -95,7 +104,8 @@ export const TransactionsProvider = ({children}:ITransactionsContextProps) => {
         filterList,
         filterOn,
         setFilterOn,
-        filterType
+        filterType,
+        deleteTransaction
     }}>{children}</TransactionsContext.Provider>)
 }
 
