@@ -50,10 +50,10 @@ button {
   --colorPrimary: #FD377E;
   --ColorPrimary2: #E34981;
   --ColorSecondary: #03B898;
-  --gray1: #F8F9FA;
-  --gray2: #E9ECEF;
-  --gray3: #868E96;
-  --gray4: #212529;
+  --grey1: #F8F9FA;
+  --grey2: #E9ECEF;
+  --grey3: #868E96;
+  --grey4: #212529;
   --feedBackNegative: #e60000;
   --feedBackWarning: #ffcd07;
   --feedBackSucess: #168821;
