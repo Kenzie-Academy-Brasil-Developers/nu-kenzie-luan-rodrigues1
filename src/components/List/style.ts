@@ -6,7 +6,6 @@ export const ListStyle = styled.section`
 
     .boxFilter{
         width: 100%;
-        
     }
 
     .boxFilter > h2 {
@@ -64,7 +63,6 @@ export const ListStyle = styled.section`
 
     .boxNoCard > img{
         width: 100%;
-        max-width: 520px;
         display: flex;
         height: 128px;
     }
@@ -82,11 +80,11 @@ export const ListStyle = styled.section`
         }
 
         .boxFilter > div {
-        width: 100%;
-        display: flex;
-        gap: 20px;
-        margin-bottom: 25px;
-    }
+            width: 100%;
+            display: flex;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
     }
 
 `

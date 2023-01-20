@@ -90,6 +90,19 @@ export const FormStyle = styled.section`
         .formAdd > input {
             margin: 0;
         }
+
+        .boxSelectForm {
+            width: 40%;
+            margin-bottom: 5px;
+        }
+
+        .inputFomAdd {
+            height: 50px;
+        }
+
+        .formAdd > button {
+            height: 50px;
+        }
         
     }
 `
