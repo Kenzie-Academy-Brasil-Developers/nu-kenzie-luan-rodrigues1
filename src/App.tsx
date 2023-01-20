@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import { TransactionsProvider } from './contexts/transactionsContext';
 import RoutesMain from './routes';
 
 

@@ -70,4 +70,26 @@ export const FormStyle = styled.section`
         border-radius: 6px;
     }
 
+    .formAdd > button:hover {
+        background-color: var(--ColorPrimary2);
+    }
+
+    @media (min-width: 900px) {
+        width: 50%;
+        max-width: 600px;
+
+        .containerForm {
+            height: 300px;
+        }
+
+        .formAdd {
+            height: 100%;
+            justify-content: space-between;
+        }
+
+        .formAdd > input {
+            margin: 0;
+        }
+        
+    }
 `

@@ -32,4 +32,8 @@ export const TotalMoneyStyle = styled.div`
         color: var(--grey3);
     }
 
+    @media (min-width: 900px) {
+        height: 100px;
+    }
+
 `

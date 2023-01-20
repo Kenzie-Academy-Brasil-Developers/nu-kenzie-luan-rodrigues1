@@ -64,6 +64,29 @@ export const ListStyle = styled.section`
 
     .boxNoCard > img{
         width: 100%;
+        max-width: 520px;
+        display: flex;
+        height: 128px;
+    }
+
+    @media (min-width: 900px) {
+        width: 50%;
+        margin: 0;
+
+        .boxFilter{
+            max-width: 300px;
+        }
+
+        .boxFilter > h2 {
+            margin: 0px 0 20px 0;
+        }
+
+        .boxFilter > div {
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        margin-bottom: 25px;
+    }
     }
 
 `

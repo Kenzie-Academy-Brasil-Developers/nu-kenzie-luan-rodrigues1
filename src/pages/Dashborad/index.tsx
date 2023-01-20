@@ -6,8 +6,10 @@ const Dashboard = () => {
     return (
         <>
             <Header/>
-            <Form/>
-            <List/>
+            <div className="containerMain">
+                <Form/>
+                <List/>
+            </div>
         </>
     )
 }
