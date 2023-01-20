@@ -63,4 +63,8 @@ button {
 .none {
   display: none;
 }
+
+.show{
+  display: block
+}
 `

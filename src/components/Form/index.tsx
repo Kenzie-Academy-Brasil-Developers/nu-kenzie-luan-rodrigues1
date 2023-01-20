@@ -10,7 +10,8 @@ const Form = () => {
         setTransactionValue, 
         transactionType, 
         setTransactionType, 
-        addTransaction} 
+        addTransaction,
+        totalTransaction} 
         = useContext(TransactionsContext)
 
     return (
@@ -36,7 +37,9 @@ const Form = () => {
                     <button className="Headline">Inserir valor</button>
                 </form>
             </div>
-            <TotalMoney/>
+            <div className={totalTransaction === 0 ? "none" : "show"}>
+                <TotalMoney/>
+            </div>
         </FormStyle>
     ) 
 }

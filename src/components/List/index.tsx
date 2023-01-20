@@ -2,6 +2,7 @@ import { useContext } from "react"
 import { ITransaction, TransactionsContext } from "../../contexts/transactionsContext"
 import Card from "../Card"
 import noCard from "../../assets/NoCard.png"
+import { ListStyle } from "./style"
 
 const List = () => {
 
@@ -13,21 +14,22 @@ const List = () => {
         = useContext(TransactionsContext)
 
     return (
-        <section>
-            <div>
-                <h2>Resumo financeiro</h2>
+        <ListStyle>
+            <div className="boxFilter">
+                <h2 className="Title3">Resumo financeiro</h2>
                 <div>
-                    <button onClick={() => {return (setFilterOn(false), filterList(""))}}>Todos</button>
-                    <button onClick={() => {return (setFilterOn(true), filterList("Entrada"))}}>Entradas</button>
-                    <button onClick={() => {return (setFilterOn(true), filterList("Despesa"))}}>Despesas</button>
+                    <button className="Body FilterButton" onClick={() => {return (setFilterOn(false), filterList(""))}}>Todos</button>
+                    <button className="Body filterButtonNo" onClick={() => {return (setFilterOn(true), filterList("Entrada"))}}>Entradas</button>
+                    <button className="Body filterButtonNo" onClick={() => {return (setFilterOn(true), filterList("Despesa"))}}>Despesas</button>
                 </div>
             </div>
             <ul>
                 {(!filterOn && listTransaction[0] === undefined) || (filterOn && filteredList[0] === undefined) ?
                 <>
-                    <li><img src={noCard} alt="card sem valor"/></li>
-                    <li><img src={noCard} alt="card sem valor"/></li>
-                    <li><img src={noCard} alt="card sem valor"/></li>
+                    <h3 className="Title3">Você ainda não possui nenhum lançamento</h3>
+                    <li className="boxNoCard"><img src={noCard} alt="card sem valor"/></li>
+                    <li className="boxNoCard"><img src={noCard} alt="card sem valor"/></li>
+                    <li className="boxNoCard"><img src={noCard} alt="card sem valor"/></li>
                 </>
                 : 
                 !filterOn ? 
@@ -35,7 +37,7 @@ const List = () => {
                 :
                 filteredList.map((el: ITransaction) => <Card infoCard={el} key={el.id}/>)}
             </ul>
-        </section>
+        </ListStyle>
     )
 }
 
