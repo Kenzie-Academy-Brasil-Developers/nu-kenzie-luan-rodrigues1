@@ -23,7 +23,7 @@ export const TypographyStyle = createGlobalStyle`
   font-size: 12px;
 }
 .Headline {
-    font-family: 'Nunito', sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-weight: 400;
   font-size: 16px;
 }

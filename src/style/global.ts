@@ -46,6 +46,12 @@ table {
 button {
     cursor: pointer;
 }
+select {
+  cursor: pointer;
+}
+option {
+  cursor: pointer;
+}
 :root {
   --colorPrimary: #FD377E;
   --ColorPrimary2: #E34981;
@@ -63,4 +69,26 @@ button {
 .none {
   display: none;
 }
+
+.show{
+  display: block
+}
+
+
+
+@media (min-width: 900px) {
+
+  .containerMain {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 50px;
+  } 
+}
+
+
+
+
 `

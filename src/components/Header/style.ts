@@ -38,4 +38,14 @@ export const HeaderStyle = styled.div`
         color: var(--grey1);
         background-color: var(--colorPrimary);
     }
+
+    @media (min-width: 900px) {
+
+        header > nav {
+            width: 75%;
+            margin: 0 auto;
+        }
+        
+    }
+
 `
