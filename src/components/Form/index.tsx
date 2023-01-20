@@ -19,13 +19,13 @@ const Form = () => {
                 <form className="formAdd" onSubmit={(event) => {return (event.preventDefault(), addTransaction())}} action="">
                     <label className="Body labelFormAdd" htmlFor="">Descrição</label>
                     <input className="inputFomAdd" value={transactionDescription} onChange={(event) => setTransactionDescription(event.target.value)} type="text" placeholder="Digite aqui sua descrição" />
-                    <span>Ex: Compra de roupas</span>
+                    <span className="Body">Ex: Compra de roupas</span>
                     <div>
-                        <div>
+                        <div className="boxSelectForm">
                             <label className="Body labelFormAdd" htmlFor="">Valor</label>
                             <input className="inputFomAdd" value={transactionValue} onChange={(event) => setTransactionValue(event.target.value)} type="text" placeholder="Ex: 100,00" />
                         </div>
-                        <div>
+                        <div className="boxSelectForm">
                             <label className="Body labelFormAdd" htmlFor="">Tipo de valor</label>
                             <select className="inputFomAdd" value={transactionType} onChange={(event) => setTransactionType(event.target.value)} name="" id="">
                                 <option value="Entrada">Entrada</option>
@@ -33,7 +33,7 @@ const Form = () => {
                             </select>
                         </div>
                     </div>
-                    <button>Inserir valor</button>
+                    <button className="Headline">Inserir valor</button>
                 </form>
             </div>
             <TotalMoney/>
