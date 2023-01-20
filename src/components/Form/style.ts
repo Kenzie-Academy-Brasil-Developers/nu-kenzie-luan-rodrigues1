@@ -4,6 +4,7 @@ export const FormStyle = styled.section`
     .containerForm {
         width: 90%;
         margin: 0 auto;
+        margin-bottom: 20px;
         border: 1px solid var(--grey2);
         padding: 30px 0px;
     }
