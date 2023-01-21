@@ -35,14 +35,6 @@ export const TotalMoneyStyle = styled.div`
     @media (min-width: 900px) {
         height: 100px;
         margin-left: 0;
-
-        /* div {
-            width: 90%;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 15px;
-        } */
     }
 
 `
