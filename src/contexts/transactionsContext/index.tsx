@@ -19,8 +19,9 @@ export interface ITransactionsContext {
     filterList: (typeFilter: string) => void
     filterOn: boolean
     setFilterOn: React.Dispatch<React.SetStateAction<boolean>>
-    filterType: string
     deleteTransaction: (id: number) => void
+    filterType: string
+    setFilterType: React.Dispatch<React.SetStateAction<string>>
 }
 
 export interface ITransaction {
@@ -105,6 +106,7 @@ export const TransactionsProvider = ({children}:ITransactionsContextProps) => {
         filterOn,
         setFilterOn,
         filterType,
+        setFilterType,
         deleteTransaction
     }}>{children}</TransactionsContext.Provider>)
 }

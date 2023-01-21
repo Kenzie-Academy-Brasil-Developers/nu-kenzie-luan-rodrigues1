@@ -10,7 +10,9 @@ const List = () => {
         filteredList, 
         filterList, 
         filterOn, 
-        setFilterOn} 
+        setFilterOn,
+        setFilterType,
+        filterType} 
         = useContext(TransactionsContext)
 
     return (
@@ -18,9 +20,9 @@ const List = () => {
             <div className="boxFilter">
                 <h2 className="Title3">Resumo financeiro</h2>
                 <div>
-                    <button className="Body FilterButton" onClick={() => {return (setFilterOn(false), filterList(""))}}>Todos</button>
-                    <button className="Body filterButtonNo" onClick={() => {return (setFilterOn(true), filterList("Entrada"))}}>Entradas</button>
-                    <button className="Body filterButtonNo" onClick={() => {return (setFilterOn(true), filterList("Despesa"))}}>Despesas</button>
+                    <button className={filterType === "" ? "Body FilterButton" : "Body filterButtonNo"} onClick={() => {return (setFilterOn(false), filterList(""), setFilterType(""))}}>Todos</button>
+                    <button className={filterType === "Entrada" ? "Body FilterButton" : "Body filterButtonNo"} onClick={() => {return (setFilterOn(true), filterList("Entrada"), setFilterType("Entrada"))}}>Entradas</button>
+                    <button className={filterType === "Despesa" ? "Body FilterButton" : "Body filterButtonNo"} onClick={() => {return (setFilterOn(true), filterList("Despesa"), setFilterType("Despesa"))}}>Despesas</button>
                 </div>
             </div>
             <ul>
