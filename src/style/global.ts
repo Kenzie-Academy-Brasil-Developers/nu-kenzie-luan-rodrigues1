@@ -83,7 +83,7 @@ option {
     margin: 0 auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin-top: 50px;
   } 
 }

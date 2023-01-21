@@ -48,4 +48,8 @@ export const CardStyle = styled.li`
         border: 1px solid var(--grey3);
     }
 
+    @media (min-width: 900px) {
+        
+    }
+
 `

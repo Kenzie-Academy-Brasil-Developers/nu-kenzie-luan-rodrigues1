@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const FormStyle = styled.section`
+max-width: 450px;
     .containerForm {
         width: 90%;
         margin: 0 auto;
@@ -76,10 +77,11 @@ export const FormStyle = styled.section`
 
     @media (min-width: 900px) {
         width: 50%;
-        max-width: 600px;
+        max-width: 500px;
 
         .containerForm {
             height: 300px;
+            margin-left: 0;
         }
 
         .formAdd {
@@ -89,6 +91,19 @@ export const FormStyle = styled.section`
 
         .formAdd > input {
             margin: 0;
+        }
+
+        .boxSelectForm {
+            width: 40%;
+            margin-bottom: 5px;
+        }
+
+        .inputFomAdd {
+            height: 50px;
+        }
+
+        .formAdd > button {
+            height: 50px;
         }
         
     }
