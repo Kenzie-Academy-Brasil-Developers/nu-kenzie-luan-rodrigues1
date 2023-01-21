@@ -68,7 +68,7 @@ export const ListStyle = styled.section`
     }
 
     @media (min-width: 900px) {
-        width: 50%;
+        width: 40%;
         margin: 0;
 
         .boxFilter{

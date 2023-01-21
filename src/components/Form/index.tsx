@@ -11,7 +11,7 @@ const Form = () => {
         transactionType, 
         setTransactionType, 
         addTransaction,
-        totalTransaction} 
+        listTransaction} 
         = useContext(TransactionsContext)
 
     return (
@@ -37,7 +37,7 @@ const Form = () => {
                     <button className="Headline">Inserir valor</button>
                 </form>
             </div>
-            <div className={totalTransaction === 0 ? "none" : "show"}>
+            <div className={listTransaction[0] === undefined ? "none" : "show"}>
                 <TotalMoney/>
             </div>
         </FormStyle>

@@ -7,7 +7,7 @@ export const CardStyle = styled.li`
         flex-direction: column;
         text-align: left;
         gap: 15px;
-        padding: 10px 0 10px 10px;
+        padding: 10px 10px 10px 10px;
         border-left: 3px solid var(--ColorSecondary);
         border-radius: 4px;
         margin-bottom: 15px;
@@ -19,11 +19,35 @@ export const CardStyle = styled.li`
         flex-direction: column;
         text-align: left;
         gap: 15px;
-        padding: 10px 0 10px 10px;
+        padding: 10px 10px 10px 10px;
         border-left: 3px solid var(--grey2);
         border-radius: 4px;
         margin-bottom: 15px;
         background-color: var(--grey1);
+    }
+
+    .boxCard > .boxName {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .boxExpenseCard > .boxName {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .boxCard > .boxTrash {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .boxExpenseCard > .boxTrash {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
     }
 
     span {
@@ -49,7 +73,55 @@ export const CardStyle = styled.li`
     }
 
     @media (min-width: 900px) {
-        
+        .boxCard {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+        }
+
+        .boxExpenseCard {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .boxCard > .boxName {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .boxExpenseCard > .boxName {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .boxCard > .boxTrash {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+        }
+
+        .boxCard > .boxTrash > p {
+            margin-top: 4px;
+        }
+
+        .boxExpenseCard > .boxTrash {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+        }
+
+        .boxExpenseCard > .boxTrash > p {
+            margin-top: 4px;
+        }
+
+        button {
+            width: 25px;
+            height: 25px;
+        }
     }
 
 `
