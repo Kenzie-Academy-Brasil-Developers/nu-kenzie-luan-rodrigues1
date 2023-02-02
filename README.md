@@ -1,46 +1,27 @@
-# Getting Started with Create React App
+# Nu Kenzie
+###
+# Sobre o projeto
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Link: https://nu-kenzie-luan-rodrigues1.vercel.app/
 
-## Available Scripts
+Está é uma aplicação que seu intuito é auxiliar na organização financeira, onde é possível anotar, listar e ver o total de seus ganhos e gastos de uma forma rápida e simples
 
-In the project directory, you can run:
+## Layout 
+![home4 (4)](https://user-images.githubusercontent.com/106760673/216421998-10fdc45b-4ac1-447e-b91f-e888e3720e53.png) ![home4 (3)](https://user-images.githubusercontent.com/106760673/216422080-de334abc-bb81-47b6-a625-b184adb2900e.png)
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Layout Desktop
+![Design sem nome (10)](https://user-images.githubusercontent.com/106760673/216424374-27d5d708-66e8-4fbf-a0a6-28361c4cb001.png) ![Design sem nome (9)](https://user-images.githubusercontent.com/106760673/216423867-83d3e1dc-eb6c-46d8-a4e8-db708ef7f701.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
+# Tecnologias e bibliotecas utilizadas
+- React 
+- TypeScript
+- Styled Components
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+# Autor
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Luan rodrigues carlos
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+http://www.linkedin.com/in/luan-rodrigues-carlos
