@@ -17,6 +17,7 @@ Está é uma aplicação que seu intuito é auxiliar na organização financeira
 # Tecnologias e bibliotecas utilizadas
 - React 
 - TypeScript
+- React Router Dom
 - Styled Components
 
 
