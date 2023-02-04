@@ -1,4 +1,5 @@
 import { createContext, useEffect, useState } from "react";
+import { toast } from "react-toastify";
 
 interface ITransactionsContextProps {
     children: React.ReactNode
@@ -53,7 +54,8 @@ export const TransactionsProvider = ({children}:ITransactionsContextProps) => {
             id: new Date().getTime()
         }
 
-        return setListTransaction([...listTransaction, newTransaction])
+        toast.success("Transação adicionada!");
+        return (setListTransaction([...listTransaction, newTransaction]), setTransactionDescription(""), setTransactionValue(""))
     }
 
     const filterList = (typeFilter: string) => {
@@ -68,7 +70,8 @@ export const TransactionsProvider = ({children}:ITransactionsContextProps) => {
             setFilteredList(deleteFilterListItem)
         }
 
-        const deleteListItem = listTransaction.filter(el => el.id !== id) 
+        const deleteListItem = listTransaction.filter(el => el.id !== id)   
+        toast.success("Transação removida!"); 
         return setListTransaction(deleteListItem)
     }
 
