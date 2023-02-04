@@ -24,6 +24,12 @@ export const HomeStyle = styled.div`
         color: var(--white);
     }
 
+    section > div {
+        margin-top: 35px;
+        display: flex;
+        justify-content: center;
+    }
+
     section > div > img {
         width: 300px;
         height: 300px;
@@ -31,7 +37,7 @@ export const HomeStyle = styled.div`
 
     .buttonDash {
         width:  100%;
-        height: 35px;
+        height: 50px;
         color: var(--white);
         background-color: var(--colorPrimary);
         display: flex;
@@ -62,6 +68,7 @@ export const HomeStyle = styled.div`
         }
 
         section > div {
+            margin-top: 0;
             margin-right: 20px;
         }
 

@@ -10,7 +10,7 @@ const Home = () => {
                     <img src={logoBlack} alt="logo"/>
                     <h1 className="title1">Centralize o controle das suas finanças</h1>
                     <h3 className="Body">De forma rápida e segura</h3>
-                    <Link className="buttonDash Body" to={"/dashboard"}>Iniciar</Link>
+                    <Link className="buttonDash Headline" to={"/dashboard"}>Iniciar</Link>
                 </header>
                 <div>
                     <img src={cardhome} alt="imagem de card dashboard" />
