@@ -5,6 +5,8 @@ import { TransactionsProvider } from './contexts/transactionsContext';
 import App from './App';
 import { GlobalStyle } from './style/global';
 import { TypographyStyle } from './style/typography';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -16,6 +18,7 @@ root.render(
         <GlobalStyle/>
         <TypographyStyle/>
         <App />
+        <ToastContainer autoClose={1200}/>
       </BrowserRouter>
     </TransactionsProvider>
   </React.StrictMode>
