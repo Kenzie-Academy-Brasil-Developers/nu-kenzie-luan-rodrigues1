@@ -18,6 +18,7 @@ Está é uma aplicação que seu intuito é auxiliar na organização financeira
 - React 
 - TypeScript
 - React Router Dom
+- React Toastify
 - Styled Components
 
 
